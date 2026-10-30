@@ -1,12 +1,156 @@
-   <!doctype html>
-   <html lang="id">
-   <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Syuja Ramadhani</title>
-   </head>
-   <body>
-     <h1>Syuja Ramadhani</h1>
-     <p>Mobile developer. Apps: <a href="https://play.google.com/store/apps/details?id=com.flatgo.learn">Flatgo</a></p>
-   </body>
-   </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Syuja Ramadhani · Mobile Developer</title>
+  <meta name="description" content="Mobile developer building apps with Flutter. Home of Flatgo, an app for learning Flutter.">
+  <meta name="theme-color" content="#111B33">
+  <style>
+    :root {
+      --bg: #0F1730;
+      --bg-2: #16213F;
+      --card: #1B2850;
+      --line: rgba(255, 255, 255, 0.10);
+      --text: #F3F5FB;
+      --muted: #A9B3CF;
+      --orange: #F08C4B;
+      --blue: #4AA8F0;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 50% -10%, var(--bg-2), var(--bg) 70%);
+      line-height: 1.6;
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 72px 24px 32px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 600;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 7vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 16px 0 0;
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 34em;
+    }
+    h2 {
+      margin: 56px 0 16px;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .app {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      padding: 20px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+    .icon {
+      flex: none;
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: #0C1429;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+    .app-body { min-width: 0; flex: 1; }
+    .app-body h3 { margin: 0; font-size: 1.2rem; }
+    .app-body p { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+    .btn {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--orange);
+      color: #1A1208;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .btn:focus-visible, .links a:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+    .links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--blue);
+      padding-bottom: 2px;
+    }
+    .links a:hover { color: var(--blue); }
+    footer {
+      padding: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 480px) {
+      main { padding-top: 48px; }
+      .app { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Mobile developer</p>
+    <h1>Syuja Ramadhani</h1>
+    <p class="lead">I build mobile apps with Flutter. Here are the apps I have published.</p>
+
+    <h2>Apps</h2>
+    <article class="app">
+      <div class="icon" aria-hidden="true">
+        <svg width="44" height="44" viewBox="0 0 44 44">
+          <rect x="10" y="5" width="12" height="34" rx="6" fill="#F08C4B"/>
+          <rect x="10" y="5" width="26" height="12" rx="6" fill="#F08C4B"/>
+          <rect x="22" y="20" width="14" height="10" rx="5" fill="#4AA8F0"/>
+        </svg>
+      </div>
+      <div class="app-body">
+        <h3>Flatgo</h3>
+        <p>Learn Flutter one module at a time, from beginner to expert.</p>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.flatgo.learn">Get it on Google Play</a>
+      </div>
+    </article>
+
+    <h2>Elsewhere</h2>
+    <div class="links">
+      <a href="https://github.com/syujaramadhani">GitHub</a>
+    </div>
+  </main>
+  <footer>&copy; 2026 Syuja Ramadhani</footer>
+</body>
+</html>
