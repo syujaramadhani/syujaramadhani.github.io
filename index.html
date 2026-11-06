@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Syuja Ramadhani · Mobile Developer</title>
-  <meta name="description" content="Mobile developer building apps with Flutter. Home of Flatgo, an app for learning Flutter.">
-  <meta name="theme-color" content="#111B33">
+  <meta name="description" content="Mobile developer building apps with Flutter. Home of Flatgo, an app for learning Flutter, and Musalaku, a prayer times app.">
+  <meta name="theme-color" content="#FFFFFF">
   <link rel="icon" href="logo-flatgo.png">
   <style>
     :root {
-      --bg: #0F1730;
-      --bg-2: #16213F;
-      --card: #1B2850;
-      --line: rgba(255, 255, 255, 0.10);
-      --text: #F3F5FB;
-      --muted: #A9B3CF;
+      --bg: #FFFFFF;
+      --bg-2: #F3F6FB;
+      --card: #FFFFFF;
+      --line: #E3E8F0;
+      --text: #111827;
+      --muted: #566175;
       --orange: #F08C4B;
-      --blue: #4AA8F0;
+      --orange-text: #B4510E;
+      --blue: #1D6FD6;
     }
     * { box-sizing: border-box; }
     html { -webkit-text-size-adjust: 100%; }
@@ -27,7 +28,7 @@
       flex-direction: column;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
-      background: radial-gradient(1200px 600px at 50% -10%, var(--bg-2), var(--bg) 70%);
+      background: linear-gradient(180deg, var(--bg-2) 0, var(--bg) 420px);
       line-height: 1.6;
     }
     main {
@@ -42,8 +43,8 @@
       font-size: 0.85rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--orange);
-      font-weight: 600;
+      color: var(--orange-text);
+      font-weight: 700;
     }
     h1 {
       margin: 0;
@@ -63,7 +64,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
-      font-weight: 600;
+      font-weight: 700;
     }
     .app {
       display: flex;
@@ -73,15 +74,16 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 20px;
+      box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04), 0 8px 24px rgba(17, 24, 39, 0.06);
     }
+    .app + .app { margin-top: 16px; }
     .icon {
       flex: none;
       width: 72px;
       height: 72px;
       border-radius: 18px;
-      background: #0C1429;
       object-fit: cover;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 0 0 1px rgba(17, 24, 39, 0.08), 0 6px 14px rgba(17, 24, 39, 0.14);
     }
     .app-body { min-width: 0; flex: 1; }
     .app-body h3 { margin: 0; font-size: 1.2rem; }
@@ -98,7 +100,14 @@
       text-decoration: none;
       transition: transform 0.15s ease, filter 0.15s ease;
     }
-    .btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .btn.is-disabled {
+      background: #E6EAF1;
+      color: #566175;
+      cursor: not-allowed;
+      user-select: none;
+    }
+    .btn.is-disabled:hover { transform: none; filter: none; }
     .btn:focus-visible, .links a:focus-visible {
       outline: 3px solid var(--blue);
       outline-offset: 3px;
@@ -107,7 +116,7 @@
     .links a {
       color: var(--text);
       text-decoration: none;
-      border-bottom: 1px solid var(--blue);
+      border-bottom: 2px solid var(--blue);
       padding-bottom: 2px;
     }
     .links a:hover { color: var(--blue); }
@@ -128,7 +137,7 @@
   <main>
     <p class="eyebrow">Mobile developer</p>
     <h1>Syuja Ramadhani</h1>
-    <p class="lead">I build mobile apps with Flutter. Here are the apps I have published.</p>
+    <p class="lead">I build mobile apps with Flutter. Here are the apps I have published and the ones on the way.</p>
 
     <h2>Apps</h2>
     <article class="app">
@@ -137,6 +146,15 @@
         <h3>Flatgo</h3>
         <p>Learn Flutter one module at a time, from beginner to expert.</p>
         <a class="btn" href="https://play.google.com/store/apps/details?id=com.flatgo.learn">Get it on Google Play</a>
+      </div>
+    </article>
+
+    <article class="app">
+      <img class="icon" src="logo-musalaku.png" alt="Musalaku app icon" width="72" height="72">
+      <div class="app-body">
+        <h3>Musalaku</h3>
+        <p>Prayer times and reminders, simple and easy to use every day.</p>
+        <span class="btn is-disabled" role="link" aria-disabled="true">Coming soon on Google Play</span>
       </div>
     </article>
 
